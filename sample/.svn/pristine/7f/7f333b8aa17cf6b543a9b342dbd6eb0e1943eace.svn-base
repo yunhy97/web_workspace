@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Bootstrap 4 Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	</head>
+<body>
+<div class="container">
+	
+	<div class="row">
+		<div class="col-12">
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">홈</a></li>
+				<li class="breadcrumb-item"><a href="#">메뉴</a></li>
+				<li class="breadcrumb-item"><a href="#">서브메뉴</a></li>
+				<li class="breadcrumb-item active">장바구니</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">장바구니</div>
+				<div class="card-body">
+					<!-- 장바구니 테이블 시작 -->
+					<table class="table">
+						<colgroup>
+							<col width="5%">
+							<col width="15%">
+							<col width="*">
+							<col width="15%">
+							<col width="15%">
+							<col width="15%">
+							<col width="7%">
+						</colgroup>
+						<thead class="thead-dark">
+							<tr>
+								<th>
+									<div class="form-check-inline">
+  										<label class="form-check-label">
+    										<input type="checkbox" class="form-check-input" value="">
+  										</label>
+									</div>
+								</th>
+								<th></th>
+								<th>상품명</th>
+								<th class="text-right">가격</th>
+								<th class="text-right">구매수량</th>
+								<th class="text-right">구매가격</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="vertical-align: middle;">
+									<div class="form-check-inline">
+  										<label class="form-check-label">
+    										<input type="checkbox" class="form-check-input" value="">
+  										</label>
+									</div>
+								</td>
+								<td style="vertical-align: middle;"><img src="../resources/images/goods/goods1.jpg" class="img-thumbnail"/></td>
+								<td style="vertical-align: middle;">시티형 자전거</td>
+								<td class="text-right" style="vertical-align: middle;"><span>150,000</span> 원</td>
+								<td class="text-right" style="vertical-align: middle;"><span>2</span> 개</td>
+								<td class="text-right" style="vertical-align: middle;"><strong>150,000</strong> 원</td>
+								<td class="text-center" style="vertical-align: middle;">
+									<div class="btn-group-vertical btn-group-sm">
+										<button type="button" class="btn btn-danger">삭제</button>
+										<button type="button" class="btn btn-primary">주문</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;">
+									<div class="form-check-inline">
+  										<label class="form-check-label">
+    										<input type="checkbox" class="form-check-input" value="">
+  										</label>
+									</div>
+								</td>
+								<td style="vertical-align: middle;"><img src="../resources/images/goods/goods1.jpg" class="img-thumbnail"/></td>
+								<td style="vertical-align: middle;">시티형 자전거</td>
+								<td class="text-right" style="vertical-align: middle;"><span>150,000</span> 원</td>
+								<td class="text-right" style="vertical-align: middle;"><span>2</span> 개</td>
+								<td class="text-right" style="vertical-align: middle;"><strong>150,000</strong> 원</td>
+								<td class="text-center" style="vertical-align: middle;">
+									<div class="btn-group-vertical btn-group-sm">
+										<button type="button" class="btn btn-danger">삭제</button>
+										<button type="button" class="btn btn-primary">주문</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle;">
+									<div class="form-check-inline">
+  										<label class="form-check-label">
+    										<input type="checkbox" class="form-check-input" value="">
+  										</label>
+									</div>
+								</td>
+								<td style="vertical-align: middle;"><img src="../resources/images/goods/goods1.jpg" class="img-thumbnail"/></td>
+								<td style="vertical-align: middle;">시티형 자전거</td>
+								<td class="text-right" style="vertical-align: middle;"><span>150,000</span> 원</td>
+								<td class="text-right" style="vertical-align: middle;"><span>2</span> 개</td>
+								<td class="text-right" style="vertical-align: middle;"><strong>150,000</strong> 원</td>
+								<td class="text-center" style="vertical-align: middle;">
+									<div class="btn-group-vertical btn-group-sm">
+										<button type="button" class="btn btn-danger">삭제</button>
+										<button type="button" class="btn btn-primary">주문</button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 장바구니 테이블 끝 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

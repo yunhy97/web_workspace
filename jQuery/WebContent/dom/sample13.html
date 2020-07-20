@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>선택된 엘리먼트를 필터링하는 메소드</h1>
+	
+	
+	<div class="box">
+		<div class="row">
+			<h4 class="best">짜장면</h4>
+			<p><span>4500</span>원</p>
+		</div>
+		<div class="row">
+			<h4>해물우동</h4>
+			<p><span>6000</span>원</p>
+		</div>
+		<div class="row">
+			<h4 class="best">짬뽕</h4>
+			<p><span>8000</span>원</p>
+		</div>
+		<div class="row">
+			<h4 class="best">불짬뽕</h4>
+			<p><span>9000</span>원</p>
+		</div>
+	</div>
+<script type="text/javascript" src="../resources/js/jquery/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	//모든 메뉴명과 가격을 화면에 출력하기
+	$(".row").each(function(index, el) {
+		var name = $(el).find('h4').text();
+		var price = $(el).find('span').text();
+		console.log(name, price);
+	});
+	
+	//모든 메뉴중에서 첫번째 메뉴의 이름과 가격을 화면에 출력하기
+	var name1=$('.row:first').find('h4').text();
+	var price1=$(".row").first().find('span').text();
+	console.log(name1, price1);
+	
+	//모든 메뉴중에서 마지막번쨰 메뉴의 이름과 가격을 화면에 출력하기
+	var name4=$('.row:last').find('h4').text();
+	var price4=$(".row").last().find('span').text();
+	console.log(name4, price4);
+	
+	//모든 메뉴중에서 두번쨰 메뉴의 이름과 가격을 화면에 출력하기
+	var name2=$('.row:eq(1)').find('h4').text();
+	var price2=$(".row").eq(1).find('span').text();
+	console.log(name2, price2);
+	
+	//모든 메뉴중에서 best인 메뉴의 객수를 출력하기
+	var len1 = $('.row:has(".best")').length;
+	var len2 = $('.row').has('best').length;
+	var len3 = $('.row').filter(':has(.best)').length;
+	console.log(len1, len2. len3)
+	 
+	//베스트 메뉴중에서 두번째 메뉴의 이름과 가격을 출력하기
+	var name3 = $('.row:has(.best):eq(1)').find('h4').text();
+	var name4 = $('.row').has('.best').eq(1).find('h4').text();
+	var name5 = $('.row').has('.best').filter(":eq(1)").find('h4').text();
+	var name6 = $('.row').filter(":has(.best):eq(1)").find('h4').text();
+	console.log(name3, name4, name5, name6);
+	
+	//모든 메뉴중에서 가격이 8000원 미만인 메뉴의 배경생을 가격조회하기
+	$('.row').filter(function(index) {
+		var price = parseInt($(this).find('span').text());
+		return price < 8000;
+	}).css('background-color','lightgreen');
+	
+	//모든 메뉴중에서 가격이 8000원 미만인 메뉴의 이름과 가격을 출력하기
+	$('.row').filter(function(index) {
+		var price = parseInt($(this).find('span').text());
+		return price < 8000;
+	}).each(function(index,el){ 
+		var name = $(el).find('h4').text();
+		var price = $(el).find('span').text();
+		console.log("저렴한 메뉴",name, price);
+	});
+})
+</script>
+</body>
+</html>
